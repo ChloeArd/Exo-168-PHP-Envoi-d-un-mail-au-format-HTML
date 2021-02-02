@@ -8,8 +8,8 @@
  */
 
 $to = [
-    'j.conan@fondationface.org',
-    ...
+    'chloe.ardoise@gmail.com',
+    'audrey.ardois59@gmail.com'
 ];
 
 $html = '
@@ -19,9 +19,17 @@ $html = '
         </head>
         <body>
             <div>
-                <!-- Vos actualités ici -->
+                Hey, j\'ai mangé une pizza !
+                C\'est un test.
             </div>
         </body>
     </html>
 ';
 
+$headers = array(
+    "Reply-To" => "chloe.ardoise@hotmail.fr",
+    "X-Mailer" => "PHP/".phpversion(),
+    "Mime-Version" => "1.0",
+    "Content-type" => "text/html; charset=utf-8"
+);
+mail($to, "test", $html, $headers, "-f chloe.ardoise@hotmail.fr");
