@@ -32,4 +32,4 @@ $headers = array(
     "Mime-Version" => "1.0",
     "Content-type" => "text/html; charset=utf-8"
 );
-mail($to, "test", $html, $headers, "-f chloe.ardoise@hotmail.fr");
+mail((string)$to, "test", $html, $headers, "-f chloe.ardoise@hotmail.fr");
